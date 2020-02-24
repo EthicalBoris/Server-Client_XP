@@ -17,7 +17,7 @@ public class Client implements AutoCloseable {
 
     public Client(String name) throws Exception {
         // attempting to connect to server with selected ID
-        Socket socket = new Socket("92.56.235.161", port);
+        Socket socket = new Socket("localhost", port);
         reader = new Scanner(socket.getInputStream());
         writer = new PrintWriter(socket.getOutputStream(), true);
 
